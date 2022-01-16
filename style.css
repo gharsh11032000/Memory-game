@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Rock+3D&family=Sacramento&family=Shizuru&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+}
+
+h1,
+h2 {
+  margin-left: 100px;
+  font-family: "Sacramento", cursive;
+}
+h2 {
+  text-decoration: underline;
+}
+
+.lives,
+span {
+  font-size: larger;
+  font-weight: 700;
+  font-family: "Sacramento", cursive;
+}
+
+.mid-part {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.card-box {
+  display: block;
+  margin: auto;
+  height: 350px;
+  width: 695px;
+}
+
+.card {
+  display: inline-block;
+  margin: 10px auto;
+  margin-left: 15px;
+  height: 150px;
+  width: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: rgba(0, 0, 0, 0.2) 10px 5px 15px;
+  cursor: pointer;
+}
+
+.face,
+.back {
+  position: absolute;
+  pointer-events: none;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background: #abced4;
+  backface-visibility: hidden;
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
+}
+
+img {
+  height: 150px;
+  width: 100px;
+}
